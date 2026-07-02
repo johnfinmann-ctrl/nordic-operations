@@ -1,204 +1,132 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordic Operations | Digitale løsninger der virker i hverdagen</title>
-    <meta name="description" content="Vi udvikler hjemmesider, apps og digitale værktøjer som SafetyScan og FreshScan, der gør arbejdet lettere, skaber overblik og sparer tid for SMV'er og foreninger.">
-    
-    <meta property="og:title" content="Nordic Operations | Digitale løsninger der virker i hverdagen">
-    <meta property="og:description" content="Professionelle web-apps, skræddersyet software og AI-integration til virksomheder og organisationer.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nordicoperations.dk/">
-    
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0B132B">
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nordic Operations | Digitale løsninger der virker i hverdagen</title>
+  <meta name="description" content="Nordic Operations udvikler hjemmesider, apps og digitale værktøjer til drift, logistik, foreninger og SMV'er." />
+  <meta property="og:title" content="Nordic Operations | Digitale løsninger der virker i hverdagen" />
+  <meta property="og:description" content="Praktiske web-apps, digitale værktøjer og AI-løsninger bygget til hverdagen." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0B132B" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="logo" aria-label="Nordic Operations forside">Nordic <span>Operations</span></a>
+      <button class="nav-toggle" aria-label="Åbn menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu">
+        <a href="#om">Om</a>
+        <a href="#loesninger">Løsninger</a>
+        <a href="#brancher">Brancher</a>
+        <a href="#sikkerhed">Sikkerhed</a>
+        <a href="#kontakt" class="btn small">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Nordic <span>Operations</span></a>
-            <button class="nav-toggle" aria-label="Åben menu" aria-expanded="false">&#9776;</button>
-            <nav class="nav-menu">
-                <a href="#om">Om os</a>
-                <a href="#loesninger">Vores løsninger</a>
-                <a href="#brancher">Brancher</a>
-                <a href="#fordele">Hvorfor os</a>
-                <a href="#kontakt" class="btn btn-primary">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-
+  <main id="top">
     <section class="hero">
-        <div class="container hero-container">
-            <h1>Digitale løsninger der virker i hverdagen</h1>
-            <p>Vi udvikler hjemmesider, apps og digitale værktøjer, der gør arbejdet lettere, skaber overblik og sparer tid.</p>
-            <div class="hero-btns">
-                <a href="#loesninger" class="btn btn-primary">Se vores løsninger</a>
-                <a href="#kontakt" class="btn btn-secondary">Kontakt os</a>
-            </div>
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Danske digitale driftsløsninger</p>
+          <h1>Digitale løsninger der virker i hverdagen</h1>
+          <p class="lead">Vi bygger hjemmesider, apps og værktøjer, der skaber overblik, sparer tid og gør drift lettere for virksomheder, foreninger og organisationer.</p>
+          <div class="actions">
+            <a href="#loesninger" class="btn primary">Se løsninger</a>
+            <a href="#kontakt" class="btn secondary">Kontakt os</a>
+          </div>
         </div>
+        <div class="hero-card">
+          <h2>Fra idé til brugbar løsning</h2>
+          <ul>
+            <li>Apps til lager, drift og service</li>
+            <li>Hjemmesider og PWA-løsninger</li>
+            <li>GDPR, sikkerhed og struktur fra start</li>
+            <li>AI kun hvor det giver reel værdi</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="om" class="section">
-        <div class="container text-center max-w-700">
-            <h2>Om Nordic Operations</h2>
-            <p>Vi er specialister i at transformere komplekse manuelle processer til brugervenlige digitale værktøjer. Uanset om det handler om sikkerhedsscanninger på lageret eller medlemsstyring i foreningen, bygger vi platforme med fokus på driftsstabilitet, sikkerhed og mærkbar værdi i den daglige drift.</p>
-        </div>
+      <div class="container narrow center">
+        <h2>Om Nordic Operations</h2>
+        <p>Nordic Operations udvikler praktiske digitale løsninger til virkelige arbejdsgange. Fokus er enkelhed, driftssikkerhed og værktøjer, som medarbejdere faktisk kan bruge på mobil, tablet og computer.</p>
+      </div>
     </section>
 
-    <section id="loesninger" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center">Vores egne løsninger</h2>
-            <p class="text-center subheader">Proprietære softwareløsninger klar til implementering eller tilpasning.</p>
-            <div class="grid grid-4">
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3>SafetyScan</h3>
-                    <p>Digitaliserede sikkerhedstjek og hændelsesregistrering i realtid til lager og produktion.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🍏</div>
-                    <h3>FreshScan</h3>
-                    <p>Kvalitetskontrol og holdbarhedsstyring optimeret til fødevare- og logistikleddet.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📋</div>
-                    <h3>CleanTask</h3>
-                    <p>Effektiv opgavestyring, rengøringsplaner og kvalitetssikring til servicefagene.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📝</div>
-                    <h3>NoteScan</h3>
-                    <p>Intelligent scanning og strukturering af fysiske dokumenter og noter direkte til skyen.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📦</div>
-                    <h3>ReolScan</h3>
-                    <p>Lager- og lokationsstyring via hurtig stregkode- og QR-scanning på mobile enheder.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3>Business Case Engine</h3>
-                    <p>Avanceret databeregningsmodel, som automatisk estimerer gevinster ved digitalisering.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🎙️</div>
-                    <h3>VoiceNote</h3>
-                    <p>Stemme-til-tekst værktøj, der konverterer mundtlige beskeder på farten til strukturerede arbejdsrapporter.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">📐</div>
-                    <h3>LayoutScan</h3>
-                    <p>Digitale plantegninger og pladsoptimering til logistikterminaler og lagerhaller.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🏢</div>
-                    <h3>Corporate Screening</h3>
-                    <p>Automatiserede onboarding-forløb og compliant baggrundstjek af leverandører og partnere.</p>
-                    <a href="#kontakt" class="card-link">Læs mere &rarr;</a>
-                </div>
-            </div>
+    <section id="loesninger" class="section muted">
+      <div class="container">
+        <div class="section-head center">
+          <h2>Vores løsninger</h2>
+          <p>Modulære løsninger, der kan bruges som de er eller tilpasses kunden.</p>
         </div>
+        <div class="cards">
+          <article class="card"><span>🛡️</span><h3>SafetyScan</h3><p>Sikkerhedstjek, hændelser, billeder, statistik og rapportering til lager og produktion.</p></article>
+          <article class="card"><span>🍏</span><h3>FreshScan</h3><p>Registrering, prognoser og kvalitetsstyring til fødevarer og produktion.</p></article>
+          <article class="card"><span>📋</span><h3>CleanTask</h3><p>Opgavestyring, rengøringsplaner og kvalitetssikring – også når lederen arbejder på afstand.</p></article>
+          <article class="card"><span>📝</span><h3>NoteScan</h3><p>Noter, mødereferater, lyd, resumeer og struktur samlet ét sted.</p></article>
+          <article class="card"><span>📦</span><h3>ReolScan</h3><p>Lokationsstyring, stregkoder, QR og overblik over reoler og lagerpladser.</p></article>
+          <article class="card"><span>📊</span><h3>Business Case Engine</h3><p>ROI-værktøj til at forklare investeringer i logistik og drift til ledelsen.</p></article>
+          <article class="card"><span>📐</span><h3>LayoutScan</h3><p>2D lagerlayout og forberedelse til 3D-optimering af plads og flow.</p></article>
+          <article class="card"><span>🏢</span><h3>Corporate Screening</h3><p>Årseftersyn, tjeklister og dokumentation for udstyr, reoler og arbejdsmiljø.</p></article>
+        </div>
+      </div>
     </section>
 
     <section id="brancher" class="section">
-        <div class="container">
-            <h2 class="text-center">Brancher vi understøtter</h2>
-            <div class="grid grid-4 chips-grid">
-                <div class="chip">Logistik</div>
-                <div class="chip">Lager</div>
-                <div class="chip">Produktion</div>
-                <div class="chip">Håndværkere</div>
-                <div class="chip">Golfklubber</div>
-                <div class="chip">Foreninger</div>
-                <div class="chip">Maritime organisationer</div>
-                <div class="chip">SMV</div>
-            </div>
+      <div class="container center">
+        <h2>Brancher vi understøtter</h2>
+        <div class="chips">
+          <span>Logistik</span><span>Lager</span><span>Produktion</span><span>Håndværkere</span><span>Golfklubber</span><span>Foreninger</span><span>Maritime organisationer</span><span>SMV</span>
         </div>
+      </div>
     </section>
 
-    <section id="fordele" class="section bg-light">
-        <div class="container">
-            <h2 class="text-center">Derfor vælger kunder os</h2>
-            <div class="grid grid-2 benefits-grid">
-                <div class="benefit-item"><span>✔</span> <div><strong>Praktiske løsninger:</strong> Software udviklet til virkeligheden i tæt samarbejde med slutbrugeren.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>Hurtig implementering:</strong> Modulære systemer sikrer hurtig udrulning uden lange ventetider.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>GDPR by Design:</strong> Sikkerhed og databeskyttelse er tænkt ind i koden fra allerførste linje.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>AI hvor det giver værdi:</strong> Vi implementerer kun kunstig intelligens, hvor det løser et reelt problem.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>Mobilvenlige apps:</strong> Alle systemer er optimeret til brug på farten og på værkstedsgulvet.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>PWA-teknologi:</strong> Dine apps virker lynhurtigt og kan installeres direkte på telefonens startskærm.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>Dansk udvikling:</strong> Lokalt forankret team, hurtig support og fuld gennemsigtighed.</div></div>
-                <div class="benefit-item"><span>✔</span> <div><strong>Fokus på regulering:</strong> Vi bygger fremtidssikret software, der tager højde for AI Act, NIS2 og CRA.</div></div>
-            </div>
+    <section id="sikkerhed" class="section dark">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Sikkerhed og ansvar</p>
+          <h2>Bygget med styr på data</h2>
+          <p>Vi tænker datasikkerhed, GDPR og ansvarlig brug af AI ind fra starten. Det gør løsningerne mere robuste og lettere at drive.</p>
         </div>
+        <div class="checklist">
+          <p>✔ GDPR by design</p>
+          <p>✔ AI Act opmærksomhed</p>
+          <p>✔ NIS2 og CRA som pejlemærker</p>
+          <p>✔ Backup, adgangsstyring og dokumentation</p>
+        </div>
+      </div>
     </section>
 
-    <section id="referencer" class="section">
-        <div class="container text-center">
-            <h2>Kommende kundecases</h2>
-            <p class="subheader">Vi er i fuld gang med at udrulle løsninger hos vores første faste samarbejdspartnere. Cases offentliggøres her løbende.</p>
-            <div class="placeholder-box">Kommende projektbeskrivelser...</div>
+    <section id="kontakt" class="section">
+      <div class="container contact">
+        <div>
+          <h2>Lad os tage en uforpligtende snak</h2>
+          <p>Har du en idé, en app, en hjemmeside eller en manuel proces, der skal digitaliseres?</p>
+          <p><strong>E-mail:</strong> <a href="mailto:hej@nordicoperations.dk">hej@nordicoperations.dk</a></p>
         </div>
+        <form id="contactForm" class="form">
+          <label>Navn<input name="name" required placeholder="Dit navn" /></label>
+          <label>E-mail<input type="email" name="email" required placeholder="din@mail.dk" /></label>
+          <label>Besked<textarea name="message" rows="5" required placeholder="Fortæl kort om behovet"></textarea></label>
+          <button class="btn primary" type="submit">Åbn mail</button>
+          <p id="formResponse" class="form-note"></p>
+        </form>
+      </div>
     </section>
+  </main>
 
-    <section id="kontakt" class="section bg-dark">
-        <div class="container">
-            <h2 class="text-center text-white">Lad os tage en uforpligtende snak</h2>
-            <div class="grid grid-2 contact-wrapper">
-                <div>
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Navn</label>
-                            <input type="text" id="name" name="name" required placeholder="Dit fulde navn">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required placeholder="Din e-mailadresse">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Besked</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Fortæl os kort om dit projekt eller behov..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send besked</button>
-                    </form>
-                    <div id="formResponse" class="form-response"></div>
-                </div>
-                <div class="contact-info text-white">
-                    <h3>Kontaktoplysninger</h3>
-                    <p><strong>E-mail:</strong> <a href="mailto:hej@nordicoperations.dk">hej@nordicoperations.dk</a></p>
-                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com" target="_blank" rel="noopener">Nordic Operations</a></p>
-                    <div class="qr-container">
-                        <p>Scan for at gemme kontakt:</p>
-                        <div class="qr-placeholder">QR KODE</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container footer-links">
-            <a href="#privatliv">Privatlivspolitik</a>
-            <a href="#cookies">Cookiepolitik</a>
-            <a href="#ai-politik">AI-politik</a>
-            <a href="#tilgaengelighed">Tilgængelighed</a>
-        </div>
-        <p class="copyright">&copy; 2026 Nordic Operations. Alle rettigheder forbeholdes.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© 2026 Nordic Operations</p>
+      <div><a href="#sikkerhed">Privatliv</a><a href="#sikkerhed">Tilgængelighed</a><a href="#sikkerhed">AI-politik</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
