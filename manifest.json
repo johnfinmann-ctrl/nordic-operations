@@ -1,1 +1,21 @@
-{"name":"Nordic Operations","short_name":"NO","start_url":"./","display":"standalone","background_color":"#0B132B","theme_color":"#0B132B","description":"Digitale løsninger der virker i hverdagen.","icons":[{"src":"favicon.svg","sizes":"any","type":"image/svg+xml"}]}
+{
+  "short_name": "NordicOps",
+  "name": "Nordic Operations Architecture",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "display": "standalone",
+  "orientation": "portrait"
+}
