@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="da" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin login | Nordic Operations</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-login-wrap">
+    <div class="admin-login-box">
+      <div class="nav-logo" style="margin-bottom:var(--space-3);">Nordic<span>Operations</span></div>
+      <h1 style="font-size:var(--fs-xl);">Log ind på admin</h1>
+      <form id="login-form">
+        <div class="form-field">
+          <label for="password">Adgangskode</label>
+          <input id="password" type="password" required autofocus>
+        </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;">Log ind</button>
+        <p id="login-error" class="muted" style="color:var(--warning);display:none;margin-top:0.75rem;">Forkert adgangskode.</p>
+      </form>
+      <p class="muted" style="font-size:var(--fs-xs);margin-top:var(--space-3);">
+        Demo-adgang til dette skelet. Erstattes af rigtig autentificering, når platformen tages i egentlig brug.
+      </p>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+  <script>
+    // Midlertidig demo-adgangskode for arkitektur-skelettet.
+    var DEMO_PASSWORD = 'nordic2026';
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var pw = document.getElementById('password').value;
+      if (NordicAuth.login(pw, DEMO_PASSWORD)) {
+        window.location.href = 'dashboard.html';
+      } else {
+        document.getElementById('login-error').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

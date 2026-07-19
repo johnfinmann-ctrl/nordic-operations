@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="da" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Nordic Operations</title>
+  <meta name="description" content="Book en uforpligtende samtale med Nordic Operations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header"><nav id="site-nav"></nav></header>
+
+  <main>
+    <section class="hero" style="padding-bottom:var(--space-4);">
+      <div class="container">
+        <div class="eyebrow">Direkte dialog</div>
+        <h1>Lad os bygge noget, der virker</h1>
+        <p class="lead">Book en uforpligtende samtale, så afklarer vi, hvilken løsning der passer bedst til jeres behov.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="container grid grid-2">
+        <div class="card" id="contact-person"></div>
+
+        <form class="card" id="contact-form">
+          <div class="form-field">
+            <label for="name">Navn</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-field">
+            <label for="email">E-mailadresse</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-field">
+            <label for="message">Beskrivelse af jeres projekt eller behov</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Book en uforpligtende samtale</button>
+          <p class="muted" style="font-size:var(--fs-xs);margin-top:0.75rem;">
+            Denne formular er endnu ikke koblet til et backend-endpoint. Indtil da: brug telefon eller e-mail herover.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <script>
+    NordicPlatform.init(function (config) {
+      var esc = NordicPlatform.escapeHTML;
+      var c = config.contact;
+      document.getElementById('contact-person').innerHTML =
+        '<h3>' + esc(c.personName) + '</h3>' +
+        '<p class="muted">' + esc(c.personTitle) + ' · ' + esc(c.company) + '</p>' +
+        '<p>📱 <a href="tel:' + esc(c.phone.replace(/\s/g, '')) + '">' + esc(c.phone) + '</a></p>' +
+        '<p>✉️ <a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></p>';
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Tak! Formularen er endnu ikke koblet til et backend-endpoint — kontakt os venligst direkte via telefon eller e-mail indtil videre.');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="da" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitale værktøjer | Nordic Operations</title>
+  <meta name="description" content="Specialudviklede digitale værktøjer og beslutningsstøtte skræddersyet til jeres flaskehalse.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header"><nav id="site-nav"></nav></header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Løsninger — Digitale værktøjer</div>
+        <h1>Værktøjer, der besvarer et konkret spørgsmål</h1>
+        <p class="lead">Fra hurtige ROI-beregninger til fuldstændige business cases: værktøjer, der giver jer et klart, brugbart svar — ikke et generisk dashboard.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="kontakt.html?solution=vaerktojer">Book en samtale</a>
+          <a class="btn btn-secondary" href="ai-agent.html">Se AI-værktøjer</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Udvalgte værktøjer</div>
+          <h2>Beslutningsstøtte og automatisering</h2>
+        </div>
+        <div class="grid grid-3" id="tool-products"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <script>
+    NordicPlatform.init(function () {
+      window.NordicPlatform.getProducts().then(function (products) {
+        var esc = NordicPlatform.escapeHTML;
+        var tools = products.filter(function (p) { return p.category === 'AI & Beslutningsværktøjer'; });
+        document.getElementById('tool-products').innerHTML = tools.map(function (p) {
+          return '<a class="card" href="produkt.html?id=' + esc(p.id) + '">' +
+            '<div class="icon">' + esc(p.icon) + '</div>' +
+            '<h3>' + esc(p.name) + '</h3>' +
+            '<p>' + esc(p.tagline) + '</p>' +
+          '</a>';
+        }).join('');
+      });
+    });
+  </script>
+</body>
+</html>

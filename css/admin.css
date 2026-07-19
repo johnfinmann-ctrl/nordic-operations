@@ -1,0 +1,46 @@
+/* ==========================================================================
+   NORDIC OPERATIONS PLATFORM — admin.css
+   Kun indlæst på /admin/-sider. Deler farve-tokens med core.css.
+   ========================================================================== */
+
+.admin-shell { display: flex; min-height: 100vh; }
+
+.admin-sidebar {
+  width: 240px; flex-shrink: 0;
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border);
+  padding: var(--space-3) var(--space-2);
+}
+.admin-sidebar .admin-logo { font-family: var(--font-display); font-weight: 800; margin-bottom: var(--space-4); }
+.admin-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.admin-nav a {
+  display: block; padding: 0.65rem 0.8rem; border-radius: var(--radius-sm);
+  font-size: var(--fs-sm); color: var(--text-muted);
+}
+.admin-nav a:hover, .admin-nav a.is-active { background: var(--bg-card); color: var(--text); }
+
+.admin-main { flex: 1; padding: var(--space-4); }
+.admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4); }
+
+.admin-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: var(--space-3); margin-bottom: var(--space-3);
+}
+
+.admin-login-wrap {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+}
+.admin-login-box {
+  width: 100%; max-width: 380px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+
+.admin-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
+.admin-table th, .admin-table td { text-align: left; padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border-soft); }
+.admin-table th { color: var(--text-muted); font-weight: 600; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.04em; }
+
+@media (max-width: 780px) {
+  .admin-shell { flex-direction: column; }
+  .admin-sidebar { width: 100%; border-right: none; border-bottom: 1px solid var(--border); }
+}

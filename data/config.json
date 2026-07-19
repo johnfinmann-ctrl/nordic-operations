@@ -1,0 +1,153 @@
+{
+  "site": {
+    "name": "Nordic Operations",
+    "tagline": "Digitale løsninger der skaber værdi",
+    "description": "Vi udvikler hjemmesider, apps og digitale værktøjer, som gør hverdagen enklere for lager, logistik, produktion, foreninger og SMV'er.",
+    "url": "https://johnfinmann-ctrl.github.io/nordic-operations/",
+    "language": "da",
+    "themeColor": "#030712"
+  },
+
+  "branding": {
+    "logoText": "Nordic",
+    "logoAccent": "Operations",
+    "logoImage": "assets/img/logo.svg",
+    "favicon": "assets/icons/favicon.svg",
+    "colors": {
+      "bg": "#030712",
+      "bgElevated": "#0b1220",
+      "bgCard": "#0f172a",
+      "border": "#1e293b",
+      "text": "#e5e7eb",
+      "textMuted": "#94a3b8",
+      "accent": "#3b82f6",
+      "accentSoft": "#1d4ed8",
+      "success": "#22c55e",
+      "warning": "#f59e0b"
+    },
+    "fonts": {
+      "display": "'Manrope', 'Inter', system-ui, sans-serif",
+      "body": "'Inter', system-ui, sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    }
+  },
+
+  "nav": {
+    "primary": [
+      { "label": "Forside", "href": "index.html" },
+      {
+        "label": "Løsninger",
+        "href": "pages/losninger.html",
+        "children": [
+          { "label": "Hjemmesider", "href": "pages/hjemmeside.html" },
+          { "label": "Medlemsløsninger", "href": "pages/medlemsloesning.html" },
+          { "label": "Apps & PWA", "href": "pages/scanapps.html" },
+          { "label": "Digitale værktøjer", "href": "pages/businesscase.html" }
+        ]
+      },
+      {
+        "label": "Produkter",
+        "href": "pages/produkter.html",
+        "children": []
+      },
+      {
+        "label": "Brancheløsninger",
+        "href": "pages/brancheloesninger.html",
+        "children": [
+          { "label": "Logistik & Lager", "href": "pages/brancheloesninger.html#logistik" },
+          { "label": "Golf", "href": "pages/brancheloesninger.html#golf" },
+          { "label": "Politik", "href": "pages/brancheloesninger.html#politik" },
+          { "label": "Foreninger", "href": "pages/brancheloesninger.html#foreninger" }
+        ]
+      },
+      { "label": "Cases", "href": "pages/cases.html" },
+      { "label": "Drift & Sikkerhed", "href": "pages/drift-sikkerhed.html" },
+      { "label": "Om os", "href": "pages/om-os.html" }
+    ],
+    "cta": { "label": "Book en samtale", "href": "pages/kontakt.html" }
+  },
+
+  "footer": {
+    "description": "Vi udvikler apps, hjemmesider og AI-drevne løsninger, der optimerer den europæiske B2B- og foreningsdrift.",
+    "columns": [
+      {
+        "title": "Produkter",
+        "links": [
+          { "label": "SafetyScan", "href": "pages/produkt.html?id=safetyscan" },
+          { "label": "FreshScan", "href": "pages/produkt.html?id=freshscan" },
+          { "label": "CleanTask", "href": "pages/produkt.html?id=cleantask" },
+          { "label": "ReolScan", "href": "pages/produkt.html?id=reolscan" }
+        ]
+      },
+      {
+        "title": "Navigation",
+        "links": [
+          { "label": "Løsninger", "href": "pages/losninger.html" },
+          { "label": "Cases", "href": "pages/cases.html" },
+          { "label": "Drift & Sikkerhed", "href": "pages/drift-sikkerhed.html" },
+          { "label": "Kontakt", "href": "pages/kontakt.html" }
+        ]
+      },
+      {
+        "title": "Retningslinjer",
+        "links": [
+          { "label": "Privatlivspolitik", "href": "pages/privatliv.html" },
+          { "label": "Cookiepolitik", "href": "pages/cookies.html" },
+          { "label": "AI-Etik & Compliance", "href": "pages/compliance.html" }
+        ]
+      }
+    ],
+    "copyright": "© 2026 Nordic Operations. Alle rettigheder forbeholdes. Udviklet med fokus på WCAG 2.1 & GDPR."
+  },
+
+  "contact": {
+    "personName": "John Finmann",
+    "personTitle": "Grundlægger & Direktør",
+    "company": "Nordic Operations",
+    "phone": "+45 00 00 00 00",
+    "email": "hej@nordicoperations.dk",
+    "linkedin": "#"
+  },
+
+  "compliance": [
+    { "icon": "shield", "label": "GDPR By Design" },
+    { "icon": "lock", "label": "NIS2 Klar" },
+    { "icon": "gear", "label": "Cyber Resilience Act" },
+    { "icon": "brain", "label": "Ansvarlig AI Act" },
+    { "icon": "chart-down", "label": "Dataminimering" },
+    { "icon": "refresh", "label": "Automatisk Backup" },
+    { "icon": "code", "label": "Sikker Udvikling" },
+    { "icon": "rocket", "label": "Høj Oppetid" }
+  ],
+
+  "categories": [
+    {
+      "id": "hjemmesider",
+      "icon": "💻",
+      "title": "Hjemmesider",
+      "summary": "Professionelle responsive hjemmesider optimeret til maksimal konvertering, lynhurtig loadtid og kompromisløs SEO.",
+      "href": "pages/hjemmeside.html"
+    },
+    {
+      "id": "medlemsloesninger",
+      "icon": "👥",
+      "title": "Hjemmeside + medlemsløsning",
+      "summary": "Hjemmeside, medlemskartotek, kontingent og administrator samlet i én sikker løsning med rigtig backend.",
+      "href": "pages/medlemsloesning.html"
+    },
+    {
+      "id": "apps",
+      "icon": "📱",
+      "title": "Apps & PWA",
+      "summary": "Progressive Web Apps, der fungerer på tværs af iOS, Android og desktop uden besvær fra app stores.",
+      "href": "pages/scanapps.html"
+    },
+    {
+      "id": "vaerktojer",
+      "icon": "🛠️",
+      "title": "Digitale værktøjer",
+      "summary": "Specialudviklede systemer og AI-værktøjer skræddersyet til din virksomheds unikke flaskehalse og behov.",
+      "href": "pages/businesscase.html"
+    }
+  ]
+}

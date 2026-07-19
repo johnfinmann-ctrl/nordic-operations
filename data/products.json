@@ -1,0 +1,411 @@
+{
+  "products": [
+    {
+      "id": "safetyscan",
+      "icon": "🛡️",
+      "name": "SafetyScan",
+      "category": "Scan-løsninger",
+      "tagline": "Intelligente sikkerhedstjek, HSE-rapportering og proaktiv risikostyring direkte fra mobilen.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": true,
+      "problem": "Sikkerhedsrunderinger og HSE-rapportering foregår ofte på papir eller i systemer, der er for tunge til den daglige drift. Fejl og risici opdages sent, og dokumentation er svær at genfinde ved audits.",
+      "solution": "SafetyScan gør sikkerhedstjek til en mobil arbejdsgang: registrer, dokumenter og eskalér afvigelser på under et minut – med automatisk historik og rapportgenerering.",
+      "features": [
+        "Mobiloptimerede sikkerhedstjek med foto-dokumentation",
+        "Automatisk eskalering af kritiske afvigelser",
+        "Fuld historik og revisionsspor",
+        "PIN-gated manager-visning adskilt fra medarbejdervisning",
+        "Offline-first – virker uden internetforbindelse"
+      ],
+      "audience": "Produktions- og logistikvirksomheder med krav om dokumenteret sikkerhedsarbejde og HSE-compliance.",
+      "screenshots": [],
+      "contactCta": "Book en demo af SafetyScan"
+    },
+    {
+      "id": "freshscan",
+      "icon": "🍏",
+      "name": "FreshScan",
+      "category": "Scan-løsninger",
+      "tagline": "Optimeret kvalitetskontrol og holdbarhedsovervågning til det moderne fødevare- og logistikled.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": true,
+      "problem": "Manuel styring af holdbarhed og bestilling i fødevarebutikker fører til madspild og ustabil vareforsyning, særligt på varer med kort holdbarhed som brød.",
+      "solution": "FreshScan kombinerer stregkodescanning, vejrdata og forbrugshistorik til at give personalet præcise bestillingsforslag i realtid.",
+      "features": [
+        "EAN-baseret varestyring via stregkodescanning",
+        "Vejrbaseret efterspørgselsprognose",
+        "Daglig bestillingsoversigt til personalet",
+        "Adminpanel til vareopsætning og rapporter",
+        "Fungerer som selvstændig PWA uden app store"
+      ],
+      "audience": "Bagerier, dagligvarebutikker og fødevarekæder med behov for præcis lagerstyring på ferskvarer.",
+      "screenshots": [],
+      "contactCta": "Book en demo af FreshScan"
+    },
+    {
+      "id": "layoutscan",
+      "icon": "📐",
+      "name": "LayoutScan",
+      "category": "Scan-løsninger",
+      "tagline": "Digital kortlægning, flowanalyser og dynamisk pladsoptimering til lagerhaller og terminaler.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Lagerlayouts ændrer sig løbende, men de fleste virksomheder arbejder ud fra forældede tegninger, der ikke afspejler den faktiske drift.",
+      "solution": "LayoutScan digitaliserer lagerets fysiske layout og gør det muligt at simulere flow- og pladsændringer, før de udføres i virkeligheden.",
+      "features": [
+        "Digital reoltegning med QR-mærkede lokationer",
+        "Flowanalyse baseret på faktisk bevægelsesmønster",
+        "Simulering af layoutændringer",
+        "Integration med ReolScan-registreringer"
+      ],
+      "audience": "Lager- og terminalansvarlige, der ønsker datadrevet pladsoptimering.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om LayoutScan"
+    },
+    {
+      "id": "reolscan",
+      "icon": "📦",
+      "name": "ReolScan",
+      "category": "Scan-løsninger",
+      "tagline": "Præcis lokations- og stregkodestyring optimeret til hurtig lageroptimering via mobile scannere.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "pilot",
+      "statusLabel": "Pilotklar",
+      "featured": false,
+      "problem": "Reolinspektioner udføres ofte på papir, hvilket gør det svært at følge op på skader og dokumentere lovpligtige eftersyn.",
+      "solution": "ReolScan fører brugeren gennem en fast wizard – stamdata, tegning, reolregister, skader, underskrift – og gemmer alt struktureret og offline-first.",
+      "features": [
+        "Guidet inspektionsflow (wizard)",
+        "QR-kobling mellem kunde og reol",
+        "Skadesregistrering med foto og underskrift",
+        "Offline-first via lokal lagring",
+        "Adminpanel bag PIN-kode"
+      ],
+      "audience": "Reol- og lagerinspektører hos virksomheder som Reoler A/S og Carletti A/S.",
+      "screenshots": [],
+      "contactCta": "Book en pilottest af ReolScan"
+    },
+    {
+      "id": "inventoryscan",
+      "icon": "📊",
+      "name": "InventoryScan",
+      "category": "Scan-løsninger",
+      "tagline": "Realtids lageroptælling, svindminimering og automatiserede genbestillingsnotifikationer.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Periodiske lageroptællinger giver et forsinket og ofte unøjagtigt billede af den faktiske beholdning.",
+      "solution": "InventoryScan gør løbende optælling til en integreret del af hverdagen, med automatiske notifikationer når lagerniveauer kræver handling.",
+      "features": [
+        "Mobil optælling med stregkode/QR",
+        "Automatiske genbestillingsalarmer",
+        "Svindrapportering",
+        "Eksport til regneark"
+      ],
+      "audience": "Virksomheder med fysisk varelager, der ønsker bedre lagerpræcision uden nyt ERP-system.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om InventoryScan"
+    },
+    {
+      "id": "cleantask",
+      "icon": "📋",
+      "name": "CleanTask",
+      "category": "Scan-løsninger",
+      "tagline": "Komplet digital opgavestyring, realtids rengøringsplaner og dokumenteret kvalitetssikring.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": false,
+      "problem": "Rengørings- og vedligeholdelsesopgaver dokumenteres ofte slet ikke, hvilket gør det svært at bevise, at standarder er overholdt.",
+      "solution": "CleanTask giver hvert team en simpel opgaveliste med kvittering, tidsstempel og fotodokumentation.",
+      "features": [
+        "Digitale opgavelister pr. område",
+        "Tidsstemplet kvittering for udførte opgaver",
+        "Fotodokumentation",
+        "Rapportoversigt til ledelsen"
+      ],
+      "audience": "Rengørings-, facility- og driftsteams med krav om dokumenteret kvalitetssikring.",
+      "screenshots": [],
+      "contactCta": "Book en demo af CleanTask"
+    },
+    {
+      "id": "notescan",
+      "icon": "📝",
+      "name": "NoteScan",
+      "category": "Scan-løsninger",
+      "tagline": "AI-drevet scanning og struktureret arkivering af fysiske noter og kvitteringer direkte til skyen.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Fysiske noter, følgesedler og kvitteringer forsvinder eller bliver aldrig registreret digitalt.",
+      "solution": "NoteScan fotograferer og strukturerer dokumentet automatisk med AI, så det kan gemmes og genfindes digitalt uden manuel indtastning.",
+      "features": [
+        "AI-baseret tekstgenkendelse",
+        "Automatisk kategorisering",
+        "Cloud-arkivering",
+        "Søgbart dokumentarkiv"
+      ],
+      "audience": "Virksomheder med meget papirbaseret dokumentation i den daglige drift.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om NoteScan"
+    },
+    {
+      "id": "surveyscan",
+      "icon": "📝",
+      "name": "SurveyScan",
+      "category": "Scan-løsninger",
+      "tagline": "Digitale tilfredshedsmålinger og lynhurtig dataindsamling på farten med live analytics dashboard.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Tilfredshedsundersøgelser laves ofte i tunge eksterne værktøjer, der ikke matcher virksomhedens branding eller arbejdsgang.",
+      "solution": "SurveyScan giver et letvægts spørgeskemaværktøj med live dashboard, der kan tilpasses hver kundes branding.",
+      "features": [
+        "Tilpasselige spørgeskemaer",
+        "Live analytics dashboard",
+        "QR-baseret adgang på farten",
+        "Eksport af rådata"
+      ],
+      "audience": "Organisationer der løbende måler tilfredshed hos kunder, medlemmer eller medarbejdere.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om SurveyScan"
+    },
+    {
+      "id": "quick-roi",
+      "icon": "📈",
+      "name": "Quick ROI",
+      "category": "AI & Beslutningsværktøjer",
+      "tagline": "Hurtig, visuel beregning af den forventede gevinst ved en digitalisering – klar på minutter.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": true,
+      "problem": "Beslutningstagere skal ofte vurdere en digital investering uden et klart, hurtigt tal for den forventede gevinst.",
+      "solution": "Quick ROI er et letvægtsværktøj, der på baggrund af få inputs giver et konkret, visuelt estimat af tidsbesparelse og økonomisk gevinst.",
+      "features": [
+        "Få-klik beregning uden regneark",
+        "Visuel præsentation af resultatet",
+        "Delbar rapport til beslutningstagere",
+        "Tilpasses den enkelte branche"
+      ],
+      "audience": "Ledere og indkøbere, der har brug for et hurtigt, præsentabelt business-argument.",
+      "screenshots": [],
+      "contactCta": "Prøv Quick ROI"
+    },
+    {
+      "id": "business-case-engine",
+      "icon": "⚙️",
+      "name": "Business Case Engine",
+      "category": "AI & Beslutningsværktøjer",
+      "tagline": "Avanceret simuleringsværktøj, der beregner de præcise gevinster og ROI ved jeres digitalisering.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": true,
+      "problem": "Store digitaliseringsbeslutninger kræver en dybere business case end et hurtigt overslag, med flere scenarier og forudsætninger.",
+      "solution": "Business Case Engine simulerer flere scenarier samtidig og viser den fulde økonomiske model bag en digital investering.",
+      "features": [
+        "Scenariesimulering (best/expected/worst case)",
+        "Detaljeret forudsætningsoversigt",
+        "Grafisk break-even-visning",
+        "Eksport til præsentation eller regneark"
+      ],
+      "audience": "Direktion og bestyrelser, der skal træffe større digitaliseringsbeslutninger på et solidt grundlag.",
+      "screenshots": [],
+      "contactCta": "Book en gennemgang af Business Case Engine"
+    },
+    {
+      "id": "leadradar",
+      "icon": "🎯",
+      "name": "LeadRadar",
+      "category": "AI & Beslutningsværktøjer",
+      "tagline": "AI-understøttet overblik over potentielle kunder og opfølgningsbehov.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Salgsopfølgning glipper ofte, fordi leads spredes ud over mail, noter og hukommelse.",
+      "solution": "LeadRadar samler leads ét sted og foreslår, hvem der bør kontaktes og hvornår, baseret på simple regler og historik.",
+      "features": [
+        "Samlet leadoverblik",
+        "Automatiske opfølgningsforslag",
+        "Statusmarkering pr. lead",
+        "Eksport til CRM"
+      ],
+      "audience": "Mindre salgsteams uden tungt CRM-system.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om LeadRadar"
+    },
+    {
+      "id": "smartpack-ai",
+      "icon": "📦",
+      "name": "SmartPack AI",
+      "category": "AI & Beslutningsværktøjer",
+      "tagline": "AI-drevet forslag til optimal pakning og fragtvalg for logistikvirksomheder.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "development",
+      "statusLabel": "Under udvikling",
+      "featured": false,
+      "problem": "Manuel pakkeplanlægning fører til spildplads og unødvendige fragtomkostninger.",
+      "solution": "SmartPack AI beregner den mest fragteffektive pakning ud fra varernes mål og valgte transportform.",
+      "features": [
+        "AI-baseret pakkeforslag",
+        "Fragtomkostningsestimat",
+        "Integration med lagerdata"
+      ],
+      "audience": "Logistik- og e-handelsvirksomheder med høj forsendelsesvolumen.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om SmartPack AI"
+    },
+    {
+      "id": "venstre-app",
+      "icon": "🗳️",
+      "name": "Venstre App",
+      "category": "Brancheløsninger – Politik",
+      "tagline": "Digital medlemskommunikation og kampagneportal til lokale politiske foreninger.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": false,
+      "problem": "Lokale politiske foreninger mangler ofte et samlet digitalt værktøj til medlemskommunikation og kampagneplanlægning.",
+      "solution": "Venstre App samler kommunikation, strategimateriale og kampagneværktøjer i én løsning bygget til den enkelte forening.",
+      "features": [
+        "Kampagne- og strategimateriale samlet ét sted",
+        "Medlemskommunikation",
+        "Tilpasset lokal partiforening",
+        "Print-klare og digitale formater"
+      ],
+      "audience": "Lokale politiske foreninger, der forbereder kommunal- og regionsvalg.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om Venstre App"
+    },
+    {
+      "id": "golf-apps",
+      "icon": "⛳",
+      "name": "Golf Apps",
+      "category": "Brancheløsninger – Golf",
+      "tagline": "Skræddersyede portaler til golfklubber. Banebooking, turneringsstyring og dynamisk medlemsinfo.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": false,
+      "problem": "Golfklubber mangler ofte en samlet digital indgang for både begyndere og eksisterende medlemmer.",
+      "solution": "Golf Apps-familien (bl.a. GolfStart, ProHub360) leverer onboarding, baneguide og medlemsfunktioner som selvstændige PWA'er pr. klub.",
+      "features": [
+        "Begynderonboarding og hold-styring",
+        "Digital baneguide",
+        "Admin-CMS for klubben",
+        "White-label pr. klub"
+      ],
+      "audience": "Golfklubber, der ønsker en moderne digital medlemsoplevelse uden dyre standardsystemer.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om Golf Apps"
+    },
+    {
+      "id": "foreningsloesninger",
+      "icon": "🤝",
+      "name": "Foreningsløsninger",
+      "category": "Brancheløsninger – Foreninger",
+      "tagline": "Brugervenlige applikationer til foreningslivet med fokus på kontingent, fællesskab og kommunikation.",
+      "pricing": {
+        "model": "kontakt",
+        "priceLabel": "Kontakt for pris",
+        "priceFrom": null,
+        "billingNote": ""
+      },
+      "status": "live",
+      "statusLabel": "Aktiv løsning",
+      "featured": false,
+      "problem": "Frivillige foreninger bruger uforholdsmæssigt meget tid på manuel medlemsadministration.",
+      "solution": "Foreningsløsninger samler hjemmeside, medlemskartotek, dokumentarkiv og kommunikation i én løsning tilpasset den enkelte forening.",
+      "features": [
+        "Medlemskartotek og kontingentstyring",
+        "Dokumentarkiv",
+        "Nyheder og arrangementer",
+        "Admin-panel for bestyrelsen"
+      ],
+      "audience": "Idræts-, vel- og interesseforeninger med behov for enkel, sikker administration.",
+      "screenshots": [],
+      "contactCta": "Hør nærmere om Foreningsløsninger"
+    }
+  ]
+}

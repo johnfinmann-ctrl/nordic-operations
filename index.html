@@ -1,403 +1,102 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da" data-root="./">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordic Operations | Digitale løsninger der skaber værdi</title>
-    <meta name="description" content="Vi udvikler hjemmesider, apps og digitale værktøjer, som gør hverdagen enklere for lager, logistik, produktion, foreninger og SMV'er.">
-    
-    <!-- Open Graph SEO -->
-    <meta property="og:title" content="Nordic Operations | Digitale løsninger der skaber værdi">
-    <meta property="og:description" content="Eksklusive PWA-apps, AI-løsninger og skræddersyet webudvikling med højt fokus på NIS2, GDPR og cybersikkerhed.">
-    <meta property="og:type" content="website">
-    
-    <!-- PWA Setup -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#030712">
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nordic Operations | Digitale løsninger der skaber værdi</title>
+  <meta name="description" content="Vi udvikler hjemmesider, medlemsløsninger, apps og digitale værktøjer til lager, logistik, foreninger og SMV'er.">
+  <meta property="og:title" content="Nordic Operations | Digitale løsninger der skaber værdi">
+  <meta property="og:description" content="Eksklusive PWA-apps, AI-løsninger og skræddersyet webudvikling med fokus på NIS2, GDPR og cybersikkerhed.">
+  <meta property="og:type" content="website">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <!-- Premium Glow Backgrounds -->
-    <div class="glow-orb orb-1"></div>
-    <div class="glow-orb orb-2"></div>
+  <header class="site-header"><nav id="site-nav"></nav></header>
 
-    <!-- Navigation Line -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Nordic<span>Operations</span></a>
-            <button class="nav-toggle" aria-label="Åben menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <nav class="nav-menu">
-                <a href="#losninger">Løsninger</a>
-                <a href="#produkter">Produkter</a>
-                <a href="#brancher">Brancher</a>
-                <a href="#cases">Cases</a>
-                <a href="#sikkerhed">Drift & Sikkerhed</a>
-                <a href="#om">Om os</a>
-                <a href="#kontakt" class="btn btn-primary">Book en samtale</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
+  <main>
     <section class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="container hero-container">
-            <div class="hero-badge">Premium B2B Software Architecture</div>
-            <h1>Digitale løsninger der skaber værdi</h1>
-            <p>Vi udvikler hjemmesider, apps og digitale værktøjer, som gør hverdagen enklere.</p>
-            <div class="hero-btns">
-                <a href="#losninger" class="btn btn-primary">Se vores løsninger</a>
-                <a href="#kontakt" class="btn btn-secondary">Book en uforpligtende samtale</a>
-            </div>
+      <div class="container">
+        <div class="eyebrow">Nordic Operations Platform</div>
+        <h1>Digitale løsninger, der skaber værdi</h1>
+        <p class="lead">Vi bygger hjemmesider, medlemsløsninger, apps og digitale værktøjer til virksomheder og foreninger, der vil have software, som rent faktisk bliver brugt.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="pages/produkter.html">Se vores løsninger</a>
+          <a class="btn btn-secondary" href="pages/kontakt.html">Book en uforpligtende samtale</a>
         </div>
+      </div>
     </section>
 
-    <!-- Core Vision & About -->
-    <section id="om" class="section border-bottom">
-        <div class="container grid grid-2 section-header-split">
-            <div>
-                <span class="section-tag">Hvem er vi</span>
-                <h2>Kompakte værktøjer. Stor forretningsværdi.</h2>
-            </div>
-            <div>
-                <p class="lead-text">Nordic Operations udvikler digitale løsninger med fokus på brugervenlighed, sikkerhed og reel forretningsværdi. Vi kombinerer praktisk erfaring med moderne teknologi.</p>
-                <p style="margin-top: 16px; color: var(--text-muted);">Vi tror på, at små digitale løsninger kan gøre en stor forskel. Vi bygger ikke store komplekse ERP-systemer – vi bygger digitale værktøjer, som mennesker rent faktisk bruger med glæde i en travl hverdag.</p>
-            </div>
+    <section id="omraader">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Fire hovedområder</div>
+          <h2>Det vi bygger</h2>
         </div>
+        <div class="grid grid-4" id="category-grid"></div>
+      </div>
     </section>
 
-    <!-- Structural Solutions (Modern Wide Cards) -->
-    <section id="losninger" class="section bg-card-dark border-bottom">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="section-tag">Kategorier</span>
-                <h2>Vores strategiske løsninger</h2>
-            </div>
-            <div class="grid grid-3">
-                <div class="solution-card">
-                    <div class="solution-icon">💻</div>
-                    <h3>Hjemmesider</h3>
-                    <p>Professionelle responsive hjemmesider optimeret til maksimal konvertering, lynhurtig loadtid og kompromisløs SEO.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">📱</div>
-                    <h3>Apps</h3>
-                    <p>Progressive Web Apps (PWA), der fungerer på tværs af iOS, Android og desktop uden besvær fra app stores.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🧠</div>
-                    <h3>AI Løsninger</h3>
-                    <p>Praktiske og operationelle AI-værktøjer, der integreres direkte i dine nuværende arbejdsgange uden kompleksitet.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🔍</div>
-                    <h3>Scan-løsninger</h3>
-                    <p>Avanceret mobile scanning til øjeblikkelig registrering, fejlfri dokumentation og præcis intern kontrol.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🛠️</div>
-                    <h3>Digitale værktøjer</h3>
-                    <p>Specialudviklede systemer skræddersyet nøjagtigt til din virksomheds unikke flaskehalse og behov.</p>
-                </div>
-            </div>
+    <section id="produkter" style="background:var(--bg-elevated);">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Udvalgte produkter</div>
+          <h2>Software, vi selv har bygget og driver</h2>
         </div>
+        <div class="grid grid-4" id="featured-products"></div>
+        <div style="margin-top:var(--space-3);">
+          <a class="card-link" href="pages/produkter.html">Se alle produkter →</a>
+        </div>
+      </div>
     </section>
 
-    <!-- Micro Products Showcase -->
-    <section id="produkter" class="section border-bottom">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="section-tag">Produktportefølje</span>
-                <h2>Proprietære Softwareprodukter</h2>
-                <p style="color: var(--text-muted); max-width: 600px; margin: 12px auto 0 auto;">Alle produkter kan tilpasses jeres infrastruktur eller fungere som uafhængige standalone moduler.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="product-card">
-                    <div class="product-img-placeholder">🛡️</div>
-                    <div class="product-content">
-                        <h3>SafetyScan</h3>
-                        <p>Intelligente sikkerhedstjek, HSE-rapportering og proaktiv risikostyring direkte fra mobilen.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-img-placeholder">🍏</div>
-                    <div class="product-content">
-                        <h3>FreshScan</h3>
-                        <p>Optimeret kvalitetskontrol og holdbarhedsovervågning til det moderne fødevare- og logistikled.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📋</div>
-                        <h3>CleanTask</h3>
-                        <p>Komplet digital opgavestyring, realtids rengøringsplaner og dokumenteret kvalitetssikring.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📝</div>
-                        <h3>NoteScan</h3>
-                        <p>AI-drevet scanning og struktureret arkivering af fysiske noter og kvitteringer direkte til skyen.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📦</div>
-                        <h3>ReolScan</h3>
-                        <p>Præcis lokations- og stregkodestyring optimeret til hurtig lageroptimering via mobile scannere.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📊</div>
-                        <h3>InventoryScan</h3>
-                        <p>Realtids lageroptælling, svindminimering og automatiserede genbestillingsnotifikationer.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📝</div>
-                        <h3>SurveyScan</h3>
-                        <p>Digitale tilfredshedsmålinger og lynhurtig dataindsamling på farten med live analytics dashboard.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">⚙️</div>
-                        <h3>Business Case Engine</h3>
-                        <p>Avanceret simuleringsværktøj, der beregner de præcise gevinster og ROI ved jeres digitalisering.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">📐</div>
-                        <h3>LayoutScan</h3>
-                        <p>Digital kortlægning, flowanalyser og dynamisk pladsoptimering til lagerhaller og terminaler.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">⛳</div>
-                        <h3>Golf-løsninger</h3>
-                        <p>Skræddersyede portaler til golfklubber. Banebooking, turneringsstyring og dynamisk medlemsinfo.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-content">
-                        <div class="product-img-placeholder">👥</div>
-                        <h3>ForeningsApps</h3>
-                        <p>Brugervenlige applikationer til foreningslivet med fokus på kontingent, fællesskab og kommunikation.</p>
-                        <a href="#kontakt" class="product-link">Læs mere &rarr;</a>
-                    </div>
-                </div>
-            </div>
+    <section id="hvorfor">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Hvorfor Nordic Operations</div>
+          <h2>Kompakte værktøjer. Stor forretningsværdi.</h2>
         </div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Bygget til drift</h3><p>Vi laver ikke tunge ERP-systemer — vi bygger værktøjer, folk faktisk bruger i en travl hverdag.</p></div>
+          <div class="card"><h3>Sikkerhed indbygget</h3><p>GDPR, NIS2 og AI Act tænkes ind fra dag ét — ikke som en eftertanke.</p></div>
+          <div class="card"><h3>Én arkitektur, mange løsninger</h3><p>Alle vores produkter deler samme robuste platform, hvilket betyder hurtigere levering til jer.</p></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Industry Focus Section -->
-    <section id="brancher" class="section bg-card-dark border-bottom">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 50px;">
-                <span class="section-tag">Fleksibilitet</span>
-                <h2>Brancher vi transformerer</h2>
-            </div>
-            <div class="industry-grid">
-                <div class="industry-chip">Lager og logistik</div>
-                <div class="industry-chip">Produktion</div>
-                <div class="industry-chip">Industri</div>
-                <div class="industry-chip">Entreprenører</div>
-                <div class="industry-chip">Detailhandel</div>
-                <div class="industry-chip">Service</div>
-                <div class="industry-chip">Foreninger</div>
-                <div class="industry-chip">Golfklubber</div>
-                <div class="industry-chip">Kulturinstitutioner</div>
-                <div class="industry-chip">Små virksomheder</div>
-            </div>
-        </div>
+    <section id="kontakt" style="background:var(--bg-elevated);">
+      <div class="container text-center">
+        <h2>Lad os bygge noget, der virker</h2>
+        <p style="max-width:520px;margin:0 auto var(--space-3);">Book en uforpligtende samtale, så finder vi ud af, hvilken løsning der passer til jeres behov.</p>
+        <a class="btn btn-primary" href="pages/kontakt.html">Book en samtale</a>
+      </div>
     </section>
+  </main>
 
-    <!-- Professional Trust & Compliance Flags -->
-    <section id="tillid" class="section border-bottom">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 50px;">
-                <span class="section-tag">Sikkerhedsarkitektur</span>
-                <h2>Enterprise Compliance & Pålidelighed</h2>
-            </div>
-            <div class="grid grid-4 trust-grid">
-                <div class="trust-item">🛡️ <h4>GDPR By Design</h4></div>
-                <div class="trust-item">🔒 <h4>NIS2 Klar</h4></div>
-                <div class="trust-item">⚙️ <h4>Cyber Resilience Act</h4></div>
-                <div class="trust-item">🧠 <h4>Ansvarlig AI Act</h4></div>
-                <div class="trust-item">📉 <h4>Dataminimering</h4></div>
-                <div class="trust-item">🔄 <h4>Automatisk Backup</h4></div>
-                <div class="trust-item">💻 <h4>Sikker Udvikling</h4></div>
-                <div class="trust-item">🚀 <h4>Høj Ooppetid</h4></div>
-            </div>
-        </div>
-    </section>
+  <footer class="site-footer" id="site-footer"></footer>
 
-    <!-- Specialized Portal: Drift & Sikkerhed -->
-    <section id="sikkerhed" class="section bg-card-dark border-bottom">
-        <div class="container">
-            <div class="portal-box">
-                <div class="grid grid-2" style="align-items: center; gap: 40px;">
-                    <div>
-                        <span class="section-tag" style="background: rgba(163,230,53,0.1); color: var(--accent);">Specialiseret Portal</span>
-                        <h2 style="margin-top: 12px;">Drift & Sikkerhed</h2>
-                        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.7;">Drift & Sikkerhed er vores dedikerede fagportal med dybdegående fokus på logistik, lageroptimering, sikkerhedsprocedurer, digitalt arbejdsmiljø samt fuld europæisk compliance.</p>
-                    </div>
-                    <div class="text-center">
-                        <a href="#kontakt" class="btn btn-primary" style="padding: 18px 36px; font-size: 1.1rem;">Besøg portalen og læs mere &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <script src="js/app.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/products.js"></script>
+  <script>
+    NordicPlatform.init(function (config) {
+      var esc = NordicPlatform.escapeHTML;
+      document.getElementById('category-grid').innerHTML = config.categories.map(function (c) {
+        return '<a class="card" href="' + NordicPlatform.ROOT + c.href + '">' +
+          '<div class="icon">' + esc(c.icon) + '</div>' +
+          '<h3>' + esc(c.title) + '</h3>' +
+          '<p>' + esc(c.summary) + '</p>' +
+          '<span class="card-link">Læs mere →</span>' +
+        '</a>';
+      }).join('');
 
-    <!-- Strategic Real Cases -->
-    <section id="cases" class="section border-bottom">
-        <div class="container">
-            <div class="text-center" style="margin-bottom: 60px;">
-                <span class="section-tag">Projekter</span>
-                <h2>Udvalgte Cases</h2>
-            </div>
-            <div class="grid grid-3">
-                <div class="case-card">
-                    <div class="case-status">Aktiv Løsning</div>
-                    <h3>Finnes Entreprise</h3>
-                    <p>Digital pladsoptimering og mobil workflow-styring.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-status">Aktiv Løsning</div>
-                    <h3>Venstre Syddjurs</h3>
-                    <p>Brugervenlig digital medlemskommunikation og kampagneportal.</p>
-                </div>
-                <div class="case-card">
-                    <div class="case-status">Aktiv Løsning</div>
-                    <h3>Ebeltoft Golf Club</h3>
-                    <p>Integreret infoterminal og automatiseret gæsteregistrering.</p>
-                </div>
-                <div class="case-card coming-soon">
-                    <div class="case-status" style="background: rgba(255,255,255,0.05); color: var(--text-muted);">Kommer snart</div>
-                    <h3>SafetyScan Suite</h3>
-                    <p>Enterprise udrulning i industriel skala.</p>
-                </div>
-                <div class="case-card coming-soon">
-                    <div class="case-status" style="background: rgba(255,255,255,0.05); color: var(--text-muted);">Kommer snart</div>
-                    <h3>FreshScan Core</h3>
-                    <p>Opgraderet AI-modul til logistiksegmentet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Premium B2B Lead Form & Contact -->
-    <section id="kontakt" class="section bg-dark">
-        <div class="container grid grid-2 contact-wrapper">
-            <div>
-                <span class="section-tag">Direkte dialog</span>
-                <h2 class="text-white" style="margin-top: 12px; margin-bottom: 16px;">Lad os bygge noget ekstraordinært sammen</h2>
-                <p style="color: var(--text-muted); margin-bottom: 40px;">Book en uforpligtende samtale og få afklaret, hvordan vores eksisterende moduler eller en skræddersyet PWA-applikation kan optimere jeres forretningsdrift.</p>
-                
-                <div class="profile-card">
-                    <div class="profile-avatar">JF</div>
-                    <div>
-                        <h4 class="text-white" style="font-size: 1.2rem;">John Finmann</h4>
-                        <p style="color: var(--accent); font-weight: 600; font-size: 0.95rem;">Grundlægger & Direktør</p>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 4px;">Nordic Operations</p>
-                    </div>
-                </div>
-
-                <div class="contact-details">
-                    <p>📱 <strong>Telefon:</strong> <a href="tel:+4500000000">+45 00 00 00 00</a></p>
-                    <p>✉️ <strong>E-mail:</strong> <a href="mailto:hej@nordicoperations.dk">hej@nordicoperations.dk</a></p>
-                    <p>🔗 <strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">John Finmann / Nordic Operations</a></p>
-                </div>
-            </div>
-
-            <div>
-                <form id="premiumContactForm" class="premium-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="c_name">Navn</label>
-                            <input type="text" id="c_name" required placeholder="Dit fulde navn">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="c_email">E-mailadresse</label>
-                        <input type="email" id="c_email" required placeholder="navn@virksomhed.dk">
-                    </div>
-                    <div class="form-group">
-                        <label for="c_msg">Beskrivelse af jeres projekt eller behov</label>
-                        <textarea id="c_msg" rows="4" required placeholder="Hvilke arbejdsprocesser eller flaskehalse ønsker I at optimere?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem; margin-top: 10px;">Book en uforpligtende samtale</button>
-                    <div id="premiumResponse" class="form-status-msg"></div>
-                </form>
-
-                <div class="qr-box text-center">
-                    <div class="qr-code-graphic">QR</div>
-                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">Scan for lynhurtigt at gemme visitkort direkte på telefonen</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Professional European Software Footer -->
-    <footer class="footer">
-        <div class="container grid grid-4 footer-grid">
-            <div>
-                <a href="#" class="logo">Nordic<span>Operations</span></a>
-                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 16px;">Vi udvikler apps, hjemmesider og AI-drevede løsninger, der optimerer den europæiske B2B- og foreningsdrift.</p>
-            </div>
-            <div>
-                <h4>Produkter</h4>
-                <ul class="footer-links-list">
-                    <li><a href="#produkter">SafetyScan</a></li>
-                    <li><a href="#produkter">FreshScan</a></li>
-                    <li><a href="#produkter">CleanTask</a></li>
-                    <li><a href="#produkter">ReolScan</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Navigation</h4>
-                <ul class="footer-links-list">
-                    <li><a href="#losninger">Løsninger</a></li>
-                    <li><a href="#cases">Cases</a></li>
-                    <li><a href="#sikkerhed">Drift & Sikkerhed</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Retningslinjer</h4>
-                <ul class="footer-links-list">
-                    <li><a href="#privatliv">Privatlivspolitik</a></li>
-                    <li><a href="#cookies">Cookiepolitik</a></li>
-                    <li><a href="#compliance">AI-Etik & Compliance</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Nordic Operations. Alle rettigheder forbeholdes. Udviklet med fokus på WCAG 2.1 & GDPR.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+      NordicProducts.renderGrid('featured-products', NordicPlatform.ROOT, { featuredOnly: true, limit: 4 });
+    });
+  </script>
 </body>
 </html>

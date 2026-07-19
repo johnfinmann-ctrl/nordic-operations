@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apps & PWA | Nordic Operations</title>
+  <meta name="description" content="Progressive Web Apps der fungerer på tværs af iOS, Android og desktop uden app stores.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <header class="site-header"><nav id="site-nav"></nav></header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Løsninger — Apps & PWA</div>
+        <h1>Apps uden app store-besvær</h1>
+        <p class="lead">Vores Progressive Web Apps installeres direkte fra browseren, fungerer offline-first, og kører på iOS, Android og desktop fra samme kodebase.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="kontakt.html?solution=apps">Book en samtale</a>
+          <a class="btn btn-secondary" href="produkter.html">Se alle app-produkter</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Scan-serien</div>
+          <h2>Vores app-produkter</h2>
+          <p>Alle apps deler samme arkitektur: enkel brugerflade, admin-panel bag PIN, offline-first.</p>
+        </div>
+        <div class="grid grid-4" id="app-products"></div>
+      </div>
+    </section>
+
+    <section style="background:var(--bg-elevated);">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Hvorfor PWA</div>
+          <h2>Fordelene ved vores app-arkitektur</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Ingen app store</h3><p>Ingen godkendelsesproces, ingen 30% i afgift, ingen ventetid på opdateringer.</p></div>
+          <div class="card"><h3>Offline-first</h3><p>Fungerer selv med dårlig eller manglende forbindelse på lager og i marken.</p></div>
+          <div class="card"><h3>Én kodebase</h3><p>Samme app virker på tværs af telefon, tablet og desktop.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/products.js"></script>
+  <script>
+    NordicPlatform.init(function () {
+      window.NordicPlatform.getProducts().then(function (products) {
+        var esc = NordicPlatform.escapeHTML;
+        var apps = products.filter(function (p) { return p.category === 'Scan-løsninger'; });
+        document.getElementById('app-products').innerHTML = apps.map(function (p) {
+          return '<a class="card" href="produkt.html?id=' + esc(p.id) + '">' +
+            '<div class="icon">' + esc(p.icon) + '</div>' +
+            '<h3>' + esc(p.name) + '</h3>' +
+            '<p>' + esc(p.tagline) + '</p>' +
+          '</a>';
+        }).join('');
+      });
+    });
+  </script>
+</body>
+</html>
