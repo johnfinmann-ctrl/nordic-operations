@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="da" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-koder | Admin | Nordic Operations</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/core.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <div class="admin-shell">
+    <aside class="admin-sidebar">
+      <div class="admin-logo">Nordic<span style="color:var(--accent);">Operations</span></div>
+      <ul class="admin-nav">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="qr.html" class="is-active">QR-koder</a></li>
+        <li><a href="#" id="logout-link" style="color:var(--warning);">Log ud</a></li>
+      </ul>
+    </aside>
+
+    <main class="admin-main">
+      <div class="admin-topbar">
+        <h1 style="margin:0;font-size:var(--fs-2xl);">QR-koder</h1>
+      </div>
+
+      <div class="admin-card muted" style="font-size:var(--fs-sm);">
+        ✅ Denne funktion virker allerede nu, uden Supabase — den genererer QR-koder
+        via samme goqr.me-mønster, I allerede bruger i jeres øvrige apps. Ingen nøgler,
+        ingen backend nødvendig.
+      </div>
+
+      <div class="grid grid-2">
+        <form class="admin-card" id="qr-form">
+          <div class="form-field">
+            <label for="qr-type">Formål</label>
+            <select id="qr-type">
+              <option value="product">Produktside</option>
+              <option value="contact">Kontakt</option>
+              <option value="event">Event / arrangement</option>
+              <option value="download">Download / dokument</option>
+              <option value="form">Formular</option>
+              <option value="custom">Andet (indsæt link selv)</option>
+            </select>
+          </div>
+          <div class="form-field" id="product-select-wrap">
+            <label for="qr-product">Vælg produkt</label>
+            <select id="qr-product"></select>
+          </div>
+          <div class="form-field" id="custom-url-wrap" style="display:none;">
+            <label for="qr-url">Link</label>
+            <input id="qr-url" type="text" placeholder="https://...">
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Generér QR-kode</button>
+        </form>
+
+        <div class="admin-card text-center" id="qr-result">
+          <p class="muted">Vælg formål og generér for at se QR-koden her.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../api/supabase.config.js"></script>
+  <script src="../api/data-source.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+  <script>
+    NordicAuth.guard(document.documentElement.dataset.root);
+
+    var siteUrl = '';
+    NordicPlatform.init(function (config) {
+      siteUrl = config.site.url.replace(/\/$/, '');
+
+      window.NordicPlatform.getProducts().then(function (products) {
+        var esc = NordicPlatform.escapeHTML;
+        document.getElementById('qr-product').innerHTML = products.map(function (p) {
+          return '<option value="' + esc(p.id) + '">' + esc(p.name) + '</option>';
+        }).join('');
+      });
+    });
+
+    var typeSelect = document.getElementById('qr-type');
+    typeSelect.addEventListener('change', function () {
+      var isProduct = typeSelect.value === 'product';
+      var isCustom = typeSelect.value === 'custom';
+      document.getElementById('product-select-wrap').style.display = isProduct ? 'block' : 'none';
+      document.getElementById('custom-url-wrap').style.display = isCustom ? 'block' : 'none';
+    });
+
+    function buildTargetUrl() {
+      var type = typeSelect.value;
+      if (type === 'product') {
+        return siteUrl + '/pages/produkt.html?id=' + document.getElementById('qr-product').value;
+      }
+      if (type === 'contact') return siteUrl + '/pages/kontakt.html';
+      if (type === 'event') return siteUrl + '/pages/kontakt.html?type=event';
+      if (type === 'download') return siteUrl + '/pages/kontakt.html?type=download';
+      if (type === 'form') return siteUrl + '/pages/kontakt.html?type=formular';
+      return document.getElementById('qr-url').value || siteUrl;
+    }
+
+    document.getElementById('qr-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var target = buildTargetUrl();
+      var qrImageUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=' + encodeURIComponent(target);
+      document.getElementById('qr-result').innerHTML =
+        '<img src="' + qrImageUrl + '" alt="QR-kode" style="margin:0 auto;border-radius:var(--radius-sm);">' +
+        '<p class="muted" style="font-size:var(--fs-xs);word-break:break-all;margin-top:0.75rem;">' + target + '</p>' +
+        '<a class="btn btn-secondary" href="' + qrImageUrl + '" download="qr-kode.png">Download PNG</a>';
+    });
+
+    document.getElementById('logout-link').addEventListener('click', function (e) {
+      e.preventDefault();
+      NordicAuth.logout();
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

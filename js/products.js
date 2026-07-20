@@ -58,6 +58,35 @@ window.NordicProducts = (function () {
 
       document.title = product.name + ' | Nordic Operations';
 
+      // ---- SEO pr. produkt: opdatér description/canonical/OG til det specifikke produkt ----
+      let descMeta = document.querySelector('meta[name="description"]');
+      if (!descMeta) { descMeta = document.createElement('meta'); descMeta.name = 'description'; document.head.appendChild(descMeta); }
+      descMeta.content = product.tagline;
+
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+      window.NordicPlatform.getConfig().then((config) => {
+        canonical.href = config.site.url.replace(/\/$/, '') + '/pages/produkt.html?id=' + product.id;
+      });
+
+      // ---- JSON-LD Product schema ----
+      const ld = document.createElement('script');
+      ld.type = 'application/ld+json';
+      ld.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: product.name,
+        description: product.tagline,
+        category: product.category,
+        offers: {
+          '@type': 'Offer',
+          price: (product.pricing && product.pricing.priceFrom) || undefined,
+          priceCurrency: 'DKK',
+          availability: product.status === 'live' ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder'
+        }
+      });
+      document.head.appendChild(ld);
+
       const features = product.features.map((f) => '<li>' + e(f) + '</li>').join('');
       const screenshots = (product.screenshots && product.screenshots.length)
         ? '<div class="grid grid-3">' + product.screenshots.map((s) =>

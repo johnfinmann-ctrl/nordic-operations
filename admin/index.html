@@ -19,6 +19,14 @@
       <h1 style="font-size:var(--fs-xl);">Log ind på admin</h1>
       <form id="login-form">
         <div class="form-field">
+          <label for="role">Rolle (demo)</label>
+          <select id="role">
+            <option value="superadmin">Superadmin</option>
+            <option value="admin" selected>Admin</option>
+            <option value="redaktor">Redaktør</option>
+          </select>
+        </div>
+        <div class="form-field">
           <label for="password">Adgangskode</label>
           <input id="password" type="password" required autofocus>
         </div>
@@ -26,11 +34,16 @@
         <p id="login-error" class="muted" style="color:var(--warning);display:none;margin-top:0.75rem;">Forkert adgangskode.</p>
       </form>
       <p class="muted" style="font-size:var(--fs-xs);margin-top:var(--space-3);">
-        Demo-adgang til dette skelet. Erstattes af rigtig autentificering, når platformen tages i egentlig brug.
+        ⚠️ Demo-adgang til dette skelet — IKKE reel sikkerhed. Al adgangskontrol
+        håndhæves i browseren og kan omgås af en teknisk bruger. Må ikke bruges
+        med rigtige kunde- eller medlemsdata, før Supabase Auth + RLS er koblet til
+        (se docs/supabase-migration-plan.md).
       </p>
     </div>
   </div>
 
+  <script src="../api/supabase.config.js"></script>
+  <script src="../api/data-source.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/auth.js"></script>
   <script>
@@ -40,7 +53,8 @@
     document.getElementById('login-form').addEventListener('submit', function (e) {
       e.preventDefault();
       var pw = document.getElementById('password').value;
-      if (NordicAuth.login(pw, DEMO_PASSWORD)) {
+      var role = document.getElementById('role').value;
+      if (NordicAuth.login(pw, DEMO_PASSWORD, role)) {
         window.location.href = 'dashboard.html';
       } else {
         document.getElementById('login-error').style.display = 'block';

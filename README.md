@@ -12,14 +12,22 @@ HTML-siderne i `pages/` er tynde skabeloner, der henter data og renderer dem —
 de indeholder ikke fast tekst, som ellers skulle rettes flere steder.
 
 ```
-├── css/            Fælles designsystem (core, responsive, admin)
-├── js/             app.js (bootstrap), nav.js, footer.js, products.js, auth.js, admin.js
-├── data/           config.json, products.json, cases.json, news.json — ALT indhold
-├── pages/           Undersider (løsninger, produkter, cases, kontakt, ...)
-├── admin/          Login + dashboard-skal (CMS-arkitektur, klar til backend)
-├── assets/         Billeder, ikoner
-├── index.html      Forside (kort — henviser videre til pages/)
-└── manifest.json   PWA-manifest
+├── .github/workflows/  CI: JSON-validering (aktiv) + valgfri manuel Pages-deploy
+├── .nojekyll           Forhindrer GitHub Pages Jekyll-processering
+├── api/                Adapterlag: data-source.js (aktiv), supabase.config.js (placeholder, inaktiv)
+├── components/         Selvstændige UI-komponenter (fx install-prompt.js)
+├── css/                Fælles designsystem (core, responsive, admin)
+├── js/                 app.js (bootstrap), nav.js, footer.js, products.js, auth.js (roller), admin.js
+├── data/               config.json, products.json (inkl. priser), cases.json, news.json — ALT indhold
+├── pages/               Undersider (løsninger, produkter, cases, kontakt, ...)
+├── admin/              Login + dashboard + QR-generator (CMS-arkitektur, klar til backend)
+├── assets/             Billeder, ikoner
+├── docs/               Arkitekturbeslutninger: booking/betaling, Supabase-aktivering, ændringsoversigter
+├── index.html          Forside (kort — henviser videre til pages/)
+├── manifest.json       PWA-manifest
+├── service-worker.js   Offline-cache af app-skal + data
+├── sitemap.xml         27 URL'er, genereret fra produktdata + statiske sider
+└── robots.txt          Blokerer /admin/, peger på sitemap
 ```
 
 ## Sådan genbruges platformen til en ny kunde
@@ -44,6 +52,22 @@ Hver side sætter `<html data-root="./">` (roden) eller `<html data-root="../">`
 `data/`, `css/`, `js/` og `assets/` — uanset om platformen ligger i
 domænets rod eller i en undermappe (fx GitHub Pages-projektsider:
 `/nordic-operations/`).
+
+## v3.0 — Master Platform-fundament
+
+Se `docs/v3-fundament-aendringsoversigt.md` for den fulde liste over,
+hvad der blev tilføjet i denne runde, og `docs/supabase-migration-plan.md`
+for hvad der aktiveres, når et rigtigt Supabase-projekt kobles til.
+
+Kort version:
+- **Virker nu, uden Supabase:** SEO (canonical/OG/Twitter/JSON-LD), PWA
+  (manifest + service worker + install-prompt), QR-generator i admin,
+  rollestruktur (Superadmin/Admin/Redaktør) som datamodel, adapterlag
+  (`api/`) klar til at få Supabase koblet ind uden at røre `pages/`.
+- **Kun demo, ikke produktionssikkert:** admin-login og rollehåndhævelse
+  — se advarslerne i `js/auth.js` og `admin/index.html`.
+- **Ikke bygget endnu (afventer jeres beslutninger):** booking, betaling,
+  kontingent, medlemsdata, faktisk Supabase-forbindelse.
 
 ## Status i dette skelet
 
