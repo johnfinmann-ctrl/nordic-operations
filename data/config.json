@@ -109,15 +109,16 @@
     "linkedin": "#"
   },
 
+  "_complianceNote": "Ikke i brug pt. Bevidst forsigtige formuleringer — se docs/v3-fundament-aendringsoversigt.md. Undgå at ændre til kategoriske claims som 'GDPR-sikret' eller 'NIS2-compliant', medmindre det er teknisk dokumenteret.",
   "compliance": [
-    { "icon": "shield", "label": "GDPR By Design" },
-    { "icon": "lock", "label": "NIS2 Klar" },
-    { "icon": "gear", "label": "Cyber Resilience Act" },
-    { "icon": "brain", "label": "Ansvarlig AI Act" },
-    { "icon": "chart-down", "label": "Dataminimering" },
-    { "icon": "refresh", "label": "Automatisk Backup" },
-    { "icon": "code", "label": "Sikker Udvikling" },
-    { "icon": "rocket", "label": "Høj Oppetid" }
+    { "icon": "shield", "label": "GDPR tænkes ind fra start" },
+    { "icon": "lock", "label": "Sikker adgangsstyring kan etableres" },
+    { "icon": "gear", "label": "Sikkerhed indtænkt i udviklingen" },
+    { "icon": "brain", "label": "Ansvarlig brug af AI" },
+    { "icon": "chart-down", "label": "Dataminimering som princip" },
+    { "icon": "refresh", "label": "Backup kan etableres pr. projekt" },
+    { "icon": "code", "label": "Sikker udviklingspraksis" },
+    { "icon": "rocket", "label": "Stabil drift" }
   ],
 
   "categories": [
@@ -125,28 +126,28 @@
       "id": "hjemmesider",
       "icon": "💻",
       "title": "Hjemmesider",
-      "summary": "Professionelle responsive hjemmesider optimeret til maksimal konvertering, lynhurtig loadtid og kompromisløs SEO.",
+      "summary": "Hurtige, responsive hjemmesider med SEO og mobilvenligt design.",
       "href": "pages/hjemmeside.html"
     },
     {
       "id": "medlemsloesninger",
       "icon": "👥",
-      "title": "Hjemmeside + medlemsløsning",
-      "summary": "Hjemmeside, medlemskartotek, kontingent og administrator samlet i én sikker løsning med rigtig backend.",
+      "title": "Medlemsløsninger",
+      "summary": "Medlemskartotek, kontingent og administrator på en sikker backend.",
       "href": "pages/medlemsloesning.html"
     },
     {
       "id": "apps",
       "icon": "📱",
-      "title": "Apps & PWA",
-      "summary": "Progressive Web Apps, der fungerer på tværs af iOS, Android og desktop uden besvær fra app stores.",
+      "title": "Apps og PWA",
+      "summary": "Progressive Web Apps, der installeres direkte fra browseren.",
       "href": "pages/scanapps.html"
     },
     {
       "id": "vaerktojer",
       "icon": "🛠️",
       "title": "Digitale værktøjer",
-      "summary": "Specialudviklede systemer og AI-værktøjer skræddersyet til din virksomheds unikke flaskehalse og behov.",
+      "summary": "Skræddersyede værktøjer og beregnere til jeres konkrete behov.",
       "href": "pages/businesscase.html"
     }
   ]

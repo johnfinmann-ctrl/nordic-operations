@@ -15,25 +15,24 @@
   <header class="site-header"><nav id="site-nav"></nav></header>
 
   <main>
-    <section class="hero">
+    <section class="hero" style="padding-bottom:var(--space-4);">
       <div class="container">
         <div class="eyebrow">Løsninger — Digitale værktøjer</div>
         <h1>Værktøjer, der besvarer et konkret spørgsmål</h1>
-        <p class="lead">Fra hurtige ROI-beregninger til fuldstændige business cases: værktøjer, der giver jer et klart, brugbart svar — ikke et generisk dashboard.</p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="kontakt.html?solution=vaerktojer">Book en samtale</a>
-          <a class="btn btn-secondary" href="ai-agent.html">Se AI-værktøjer</a>
-        </div>
+        <p class="lead">Fra hurtige ROI-beregninger til fuldstændige business cases — skræddersyet til jeres behov.</p>
       </div>
     </section>
 
-    <section>
+    <section style="padding-top:0;">
       <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Udvalgte værktøjer</div>
-          <h2>Beslutningsstøtte og automatisering</h2>
-        </div>
         <div class="grid grid-3" id="tool-products"></div>
+      </div>
+    </section>
+
+    <section class="text-center">
+      <div class="container">
+        <h2 style="margin-bottom:0.5rem;">Har I brug for et skræddersyet værktøj?</h2>
+        <a class="btn btn-primary" href="kontakt.html?solution=vaerktojer">Kontakt os</a>
       </div>
     </section>
   </main>
@@ -58,7 +57,7 @@
           return '<a class="card" href="produkt.html?id=' + esc(p.id) + '">' +
             '<div class="icon">' + esc(p.icon) + '</div>' +
             '<h3>' + esc(p.name) + '</h3>' +
-            '<p>' + esc(p.tagline) + '</p>' +
+            '<p style="margin:0;">' + esc(p.tagline) + '</p>' +
           '</a>';
         }).join('');
       });

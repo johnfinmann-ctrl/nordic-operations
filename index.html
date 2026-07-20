@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nordic Operations | Digitale løsninger der skaber værdi</title>
-  <meta name="description" content="Vi udvikler hjemmesider, medlemsløsninger, apps og digitale værktøjer til lager, logistik, foreninger og SMV'er.">
-  <meta property="og:title" content="Nordic Operations | Digitale løsninger der skaber værdi">
-  <meta property="og:description" content="Eksklusive PWA-apps, AI-løsninger og skræddersyet webudvikling med fokus på NIS2, GDPR og cybersikkerhed.">
+  <title>Nordic Operations | Digitale løsninger, der virker i praksis</title>
+  <meta name="description" content="Nordic Operations udvikler hjemmesider, apps, medlemsløsninger og digitale værktøjer til virksomheder og foreninger.">
+  <meta property="og:title" content="Nordic Operations | Digitale løsninger, der virker i praksis">
+  <meta property="og:description" content="Hjemmesider, apps, medlemsløsninger og digitale værktøjer til virksomheder og foreninger.">
   <meta property="og:type" content="website">
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +21,12 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="eyebrow">Nordic Operations Platform</div>
-        <h1>Digitale løsninger, der skaber værdi</h1>
-        <p class="lead">Vi bygger hjemmesider, medlemsløsninger, apps og digitale værktøjer til virksomheder og foreninger, der vil have software, som rent faktisk bliver brugt.</p>
+        <div class="eyebrow">Nordic Operations</div>
+        <h1>Digitale løsninger, der virker i praksis</h1>
+        <p class="lead">Nordic Operations udvikler hjemmesider, apps, medlemsløsninger og digitale værktøjer til virksomheder og foreninger.</p>
         <div class="btn-row">
-          <a class="btn btn-primary" href="pages/produkter.html">Se vores løsninger</a>
-          <a class="btn btn-secondary" href="pages/kontakt.html">Book en uforpligtende samtale</a>
+          <a class="btn btn-primary" href="pages/produkter.html">Se løsninger</a>
+          <a class="btn btn-secondary" href="pages/kontakt.html">Kontakt os</a>
         </div>
       </div>
     </section>
@@ -34,45 +34,43 @@
     <section id="omraader">
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Fire hovedområder</div>
-          <h2>Det vi bygger</h2>
+          <div class="eyebrow">Hvad vi laver</div>
         </div>
         <div class="grid grid-4" id="category-grid"></div>
       </div>
     </section>
 
-    <section id="produkter" style="background:var(--bg-elevated);">
-      <div class="container">
-        <div class="section-header">
-          <div class="eyebrow">Udvalgte produkter</div>
-          <h2>Software, vi selv har bygget og driver</h2>
+    <section style="background:var(--bg-elevated);">
+      <div class="container grid grid-2" style="align-items:center;">
+        <div>
+          <div class="eyebrow">Drift & Sikkerhed</div>
+          <h2 style="margin-bottom:0.5rem;">En separat vidensportal</h2>
+          <p style="margin:0;">Praktiske værktøjer, viden og løsninger inden for logistik, drift, arbejdsmiljø og sikkerhed.</p>
         </div>
-        <div class="grid grid-4" id="featured-products"></div>
-        <div style="margin-top:var(--space-3);">
-          <a class="card-link" href="pages/produkter.html">Se alle produkter →</a>
+        <div>
+          <a class="btn btn-primary" href="pages/drift-sikkerhed.html">Besøg Drift & Sikkerhed</a>
         </div>
       </div>
     </section>
 
-    <section id="hvorfor">
+    <section>
       <div class="container">
         <div class="section-header">
-          <div class="eyebrow">Hvorfor Nordic Operations</div>
-          <h2>Kompakte værktøjer. Stor forretningsværdi.</h2>
+          <div class="eyebrow">Sådan bygger vi</div>
         </div>
         <div class="grid grid-3">
-          <div class="card"><h3>Bygget til drift</h3><p>Vi laver ikke tunge ERP-systemer — vi bygger værktøjer, folk faktisk bruger i en travl hverdag.</p></div>
-          <div class="card"><h3>Sikkerhed indbygget</h3><p>GDPR, NIS2 og AI Act tænkes ind fra dag ét — ikke som en eftertanke.</p></div>
-          <div class="card"><h3>Én arkitektur, mange løsninger</h3><p>Alle vores produkter deler samme robuste platform, hvilket betyder hurtigere levering til jer.</p></div>
+          <div class="card"><p style="margin:0;">GDPR tænkes ind i løsningens opbygning fra starten.</p></div>
+          <div class="card"><p style="margin:0;">Skalerbar backend, der kan forbindes med Supabase.</p></div>
+          <div class="card"><p style="margin:0;">Løsningerne kan bruges på mobil, tablet og computer.</p></div>
         </div>
       </div>
     </section>
 
     <section id="kontakt" style="background:var(--bg-elevated);">
       <div class="container text-center">
-        <h2>Lad os bygge noget, der virker</h2>
-        <p style="max-width:520px;margin:0 auto var(--space-3);">Book en uforpligtende samtale, så finder vi ud af, hvilken løsning der passer til jeres behov.</p>
-        <a class="btn btn-primary" href="pages/kontakt.html">Book en samtale</a>
+        <h2 style="margin-bottom:0.5rem;">Har I en opgave eller idé?</h2>
+        <p style="max-width:480px;margin:0 auto var(--space-3);">Vi tager gerne en uforpligtende samtale.</p>
+        <a class="btn btn-primary" href="pages/kontakt.html">Kontakt os</a>
       </div>
     </section>
   </main>
@@ -80,15 +78,11 @@
   <footer class="site-footer" id="site-footer"></footer>
 
   <script src="api/supabase.config.js"></script>
-
   <script src="api/data-source.js"></script>
-
   <script src="js/app.js"></script>
-
-  <script src="components/install-prompt.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/footer.js"></script>
-  <script src="js/products.js"></script>
+  <script src="components/install-prompt.js"></script>
   <script>
     NordicPlatform.init(function (config) {
       var esc = NordicPlatform.escapeHTML;
@@ -96,12 +90,9 @@
         return '<a class="card" href="' + NordicPlatform.ROOT + c.href + '">' +
           '<div class="icon">' + esc(c.icon) + '</div>' +
           '<h3>' + esc(c.title) + '</h3>' +
-          '<p>' + esc(c.summary) + '</p>' +
-          '<span class="card-link">Læs mere →</span>' +
+          '<p style="margin:0;">' + esc(c.summary) + '</p>' +
         '</a>';
       }).join('');
-
-      NordicProducts.renderGrid('featured-products', NordicPlatform.ROOT, { featuredOnly: true, limit: 4 });
     });
   </script>
 </body>
