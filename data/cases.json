@@ -1,35 +1,35 @@
 {
   "cases": [
     {
-      "id": "finnes-entreprise",
-      "name": "Finnes Entreprise",
+      "id": "anlaegsvirksomhed",
+      "name": "Anlægsvirksomhed",
       "status": "live",
       "statusLabel": "Aktiv løsning",
-      "summary": "Digital pladsoptimering og mobil workflow-styring.",
-      "description": "Finnes Entreprise fik en mobil arbejdsgang til pladsstyring, der erstattede papirbaserede rutiner med digital registrering direkte fra marken."
+      "summary": "Digital pladsstyring direkte fra marken.",
+      "description": "En mobil arbejdsgang til pladsstyring erstattede papirbaserede rutiner med digital registrering direkte fra marken."
     },
     {
-      "id": "venstre-syddjurs",
-      "name": "Venstre Syddjurs",
+      "id": "politisk-lokalforening",
+      "name": "Politisk lokalforening",
       "status": "live",
       "statusLabel": "Aktiv løsning",
-      "summary": "Brugervenlig digital medlemskommunikation og kampagneportal.",
-      "description": "Venstre Syddjurs fik en samlet kampagneportal og strategipakke til forberedelse af kommunalvalget, inklusive analyse, kandidatpipeline og kommunikationsmateriale."
+      "summary": "Samlet kampagneportal og strategimateriale.",
+      "description": "En samlet kampagneportal og strategipakke til forberedelse af kommunalvalg, inklusive analyse, kandidatpipeline og kommunikationsmateriale."
     },
     {
-      "id": "ebeltoft-golf-club",
-      "name": "Ebeltoft Golf Club",
+      "id": "golfklub",
+      "name": "Golfklub",
       "status": "live",
       "statusLabel": "Aktiv løsning",
-      "summary": "Integreret infoterminal og automatiseret gæsteregistrering.",
-      "description": "Ebeltoft Golf Club fik en fuld digital platform med baneguide, medlemsdashboard og café-bestilling som selvstændig PWA."
+      "summary": "Digital baneguide og medlemsdashboard.",
+      "description": "En fuld digital platform med baneguide, medlemsdashboard og bestillingsløsning til klubbens café."
     },
     {
       "id": "safetyscan-suite",
       "name": "SafetyScan Suite",
       "status": "upcoming",
       "statusLabel": "Kommer snart",
-      "summary": "Enterprise udrulning i industriel skala.",
+      "summary": "Udrulning i industriel skala.",
       "description": "Udvidelse af SafetyScan til flerlokations-drift med central rapportering."
     },
     {
@@ -37,8 +37,8 @@
       "name": "FreshScan Core",
       "status": "upcoming",
       "statusLabel": "Kommer snart",
-      "summary": "Opgraderet AI-modul til logistiksegmentet.",
-      "description": "Ny AI-drevet prognosemodel til FreshScan målrettet det bredere logistikled."
+      "summary": "Opgraderet prognosemodel til logistiksegmentet.",
+      "description": "En ny, AI-drevet prognosemodel til FreshScan målrettet det bredere logistikled."
     }
   ]
 }

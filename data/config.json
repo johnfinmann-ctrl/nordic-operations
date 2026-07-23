@@ -126,28 +126,28 @@
       "id": "hjemmesider",
       "icon": "💻",
       "title": "Hjemmesider",
-      "summary": "Hurtige, responsive hjemmesider med SEO og mobilvenligt design.",
+      "summary": "Flere henvendelser og et stærkere førstehåndsindtryk.",
       "href": "pages/hjemmeside.html"
     },
     {
       "id": "medlemsloesninger",
       "icon": "👥",
       "title": "Medlemsløsninger",
-      "summary": "Medlemskartotek, kontingent og administrator på en sikker backend.",
+      "summary": "Mindre administration for bestyrelsen, bedre service for medlemmerne.",
       "href": "pages/medlemsloesning.html"
     },
     {
       "id": "apps",
       "icon": "📱",
       "title": "Apps og PWA",
-      "summary": "Progressive Web Apps, der installeres direkte fra browseren.",
+      "summary": "Hurtigere registreringer, mindre papirarbejde.",
       "href": "pages/scanapps.html"
     },
     {
       "id": "vaerktojer",
       "icon": "🛠️",
       "title": "Digitale værktøjer",
-      "summary": "Skræddersyede værktøjer og beregnere til jeres konkrete behov.",
+      "summary": "Bedre beslutninger på et solidt regnestykke.",
       "href": "pages/businesscase.html"
     }
   ]
